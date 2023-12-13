@@ -36,8 +36,6 @@ login_manager.init_app(app)
 # from models import User, Corn, photos, UserHistory, Pest, UpdatePestForm, secure_filename
 # app = create_app() 
 
-
-
 def save_photo(photo_data):
     if photo_data:
         # Save the photo using Flask-Uploads
@@ -45,21 +43,6 @@ def save_photo(photo_data):
         return filename
     # Return None if no photo is provided
     return None
-
-# @app.route('/upload', methods=['GET', 'POST'])
-# def upload_photo():
-#     form = UploadForm()
-
-#     if form.validate_on_submit():
-#         uploaded_photo = form.photo.data
-#         filename = secure_filename(uploaded_photo.filename)
-#         photos.save(uploaded_photo, name=filename)
-
-#         # Additional processing or save filename to the database
-
-#         return redirect(url_for('uploaded_photo', filename=filename))
-
-#     return render_template('upload.html', form=form)
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -307,45 +290,6 @@ def get_pest_data():
     pest_data = Pest.query.all()
     return pest_data
 
-@app.route('/get_pest_details/<int:pest_id>')
-def get_pest_details(pest_id):
-    pest = Pest.query.get(pest_id)
-
-    if pest:
-        pest_data = {
-            'pest_name': pest.pest_name,
-            'pest_damage': pest.pest_damage,
-            'pest_cycle': pest.pest_cycle,
-            'pest_control': pest.pest_control,
-        }
-
-        # Convert binary data (bytes) to base64 encoding
-        if pest.pest_photo:
-            pest_data['pest_photo'] = base64.b64encode(pest.pest_photo).decode('utf-8')
-        else:
-            pest_data['pest_photo'] = None
-
-        return jsonify(pest_data), 200
-    else:
-        # Return a 404 (NOT FOUND) response if pest is not found
-        abort(404)
-
-# @app.route('/add', methods=['GET', 'POST'])
-# def add_pest():
-#     form = AddPestForm()
-#     if form.validate_on_submit():
-#         new_pest = Pest(
-#             pest_name=form.pest_name.data,
-#             pest_damage=form.pest_damage.data,
-#             pest_cycle=form.pest_cycle.data,
-#             pest_control=form.pest_control.data
-#         )
-#         db.session.add(new_pest)
-#         db.session.commit()
-#         flash('Pest added successfully', 'success')
-#         return redirect(url_for('show_pest'))
-#     return render_template('admin/add_pest.html', form=form)
-
 @app.route('/update_pest/<int:pest_id>', methods=['POST'])
 @login_required
 def update_pest(pest_id):
@@ -576,4 +520,4 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
         initialize_admin()
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')
