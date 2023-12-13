@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6bc746904.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>MaizExpert</title>
+    <style type="text/css">
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        * {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            margin: 0;
+        }
+        h4 {
+            margin-top: 10px;
+            color: #ffa500;
+        }
+        /* General styling for form container */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Styling for labels */
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Styling for select elements */
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for number input */
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for date input */
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for submit button */
+        button {
+            background-color: #e2d600;
+            color: #000000;
+            font-size: 18px;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            max-width: 200px;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Corn Variety Prediction</h4>
+            <form action="{{ url_for('predict') }}" method="post">
+                <!-- Your form fields here -->
+                <label for="type"><h4>Corn Type</h4></label>
+                <select name="type" required>
+                    {% for t in types %}
+                        <option value="{{ t }}">{{ t }}</option>
+                    {% endfor %}
+                </select><br>
+                
+                <label for="trait"><h4>Corn Trait</h4></label>
+                <select name="trait" required>
+                    {% for tr in traits %}
+                        <option value="{{ tr }}">{{ tr }}</option>
+                    {% endfor %}
+                </select><br>
+                
+                <label for="domain"><h4>Place</h4></label>
+                <select name="domain" required>
+                    {% for d in domains %}
+                        <option value="{{ d }}">{{ d }}</option>
+                    {% endfor %}
+                </select><br>
+                
+                <label for="target_planting_date"><h4>Target Planting Date</h4></label>
+                <input type="date" name="target_planting_date" id="target_planting_date" onchange="updateHarvestDate()" required><br>
+
+                <label for="target_harvest_date"><h4>Target Harvest Date</h4></label>
+                <input type="date" name="target_harvest_date" id="target_harvest_date" required><br>
+                
+                <label for="farm_size"><h4>Farm Size in hectare</h4></label>
+                <input type="number" name="farm_size" required><br>
+
+                <!-- Add Yes/No buttons -->
+                <label for="is_large_farm"><h4>Was a rapid soil test performed in your soil?</h4></label>
+                <label><input type="radio" name="is_large_farm" value="yes" required> Yes</label>
+                <label><input type="radio" name="is_large_farm" value="no" required> No</label><br>
+
+
+                <button type="submit">Predict</button>
+            </form>
+        
+    </div>
+    
+</body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        function validateDates() {
+            var plantingDateInput = document.getElementById('target_planting_date');
+            var harvestDateInput = document.getElementById('target_harvest_date');
+    
+            // Get the selected planting date
+            var plantingDate = new Date(plantingDateInput.value);
+    
+            // Calculate the minimum harvest date (e.g., 68 days later)
+            var minHarvestDate = new Date(plantingDate.getTime() + 68 * 24 * 60 * 60 * 1000);
+    
+            // Get the selected harvest date
+            var harvestDate = new Date(harvestDateInput.value);
+    
+            // Get the current date
+            var currentDate = new Date();
+    
+            // Check if the harvest date is in the future and meets the minimum requirement
+            if (harvestDate < currentDate || harvestDate < minHarvestDate) {
+                alert('Please select a harvest date in the future and at least 68 days after the planting date.');
+                return false; // Prevent form submission
+            }
+    
+            return true; // Allow form submission
+        }
+    
+        // Function to update the minimum harvest date when the planting date changes
+        function updateHarvestDate() {
+            var plantingDateInput = document.getElementById('target_planting_date');
+            var harvestDateInput = document.getElementById('target_harvest_date');
+    
+            // Get the selected planting date
+            var plantingDate = new Date(plantingDateInput.value);
+    
+            // Calculate the minimum harvest date (e.g., 68 days later)
+            var minHarvestDate = new Date(plantingDate.getTime() + 68 * 24 * 60 * 60 * 1000);
+    
+            // Set the minimum harvest date in the input field
+            harvestDateInput.min = minHarvestDate.toISOString().split('T')[0];
+        }
+    </script>
+    
+
+</html>

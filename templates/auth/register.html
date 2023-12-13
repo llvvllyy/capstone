@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Registration</title>
+
+</head>
+<body>
+    <div class="form-container-register signup-form">
+        <h2>REGISTER</h2>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success" id="flash-messages">
+                    <ul style="list-style-type: none; padding: 0; margin: 0; font-weight: bold; text-align: justify; color: red;">
+                        {% for message in messages %}
+                            <li>{{ message }} <span class="close-flash" onclick="closeFlash(this)">x</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="register">
+            <form action="{{ url_for('register') }}" method="post">
+                <label for="signup-firstname">First Name:</label>
+                <input type="text" id="signup-firstname" name="firstname" required>
+                <label for="signup-lastname">Last Name:</label>
+                <input type="text" id="signup-lastname" name="lastname" required>
+                <label for="signup-email">Email:</label>
+                <input type="text" id="signup-email" name="email" required>
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px;">
+                Already have an account? 
+                <a href="{{ url_for('login') }}" class="login-link">Click Here</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function closeFlash(element) {
+        $(element).parent().remove();  // Remove the entire <li> element when 'x' is clicked
+    }
+</script>
+
+</html>

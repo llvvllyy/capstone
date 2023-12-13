@@ -1,0 +1,458 @@
+﻿variety,type,trait,domain,maturity_ds,maturity_ws,yield
+IES Cn4,Hybrid,White,Luzon,96,92,5.36
+IPB 911,Hybrid,Yellow,National,99,97,7.18
+IPB 9204,Hybrid,Yellow,National,100,97,5.87
+BS 9754,Hybrid,Yellow,National,99,95,6.1
+FE 817,Hybrid,Yellow,National,97,97,5.88
+FE 820,Hybrid,Yellow,National,98,94,5.86
+LG 3B,OPV,Yellow,National,100,105,5.19
+Cn 96-68 USM Var 12,OPV,White,Luzon,110.3,100.89,5.15
+Cn 96-68 USM Var 12,OPV,White,Mindanao,110.3,100.89,5.15
+Cn 96-69 Kristal,Hybrid,Yellow,Mindanao,102.48,106.71,6.01
+Cn 96-70  BS 9881,Hybrid,Yellow,Luzon,102.5,99.62,6.12
+Cn 96-70  BS 9881,Hybrid,Yellow,Mindanao,102.5,99.62,6.12
+Cn 96-71 CW 22,Hybrid,Yellow,Luzon,103.11,98.5,6.43
+Cn 96-71 CW 22,Hybrid,Yellow,Mindanao,103.11,98.5,6.43
+Cn 96-72 CW 24,Hybrid,Yellow,National,103.62,102.86,6.19
+Cn 96-73 CW 26,Hybrid,Yellow,Luzon,102,108.75,6.28
+Cn 96-74 FE 8826,Hybrid,Yellow,Luzon,108.08,101,6.88
+Cn 96-74 FE 8826,Hybrid,Yellow,Mindanao,108.08,101,6.88
+C-818,Hybrid,Yellow,National,102.71,102.38,7.58
+C-838,Hybrid,Yellow,National,103.14,102.37,7.55
+C-909,Hybrid,Yellow,National,100.7,99.5,7.62
+MARIANA I,Hybrid,Yellow,National,103,100,6.34
+MARIANA III,Hybrid,Yellow,National,104,101,6.31
+MARIANA,Hybrid,Yellow,National,104,101,6.28
+C-939,Hybrid,Yellow,Luzon,103,101,7.28
+C-939,Hybrid,Yellow,Mindanao,103,101,7.28
+ FE 325,Hybrid,Yellow,National,104,101,5.95
+MARIANA II,Hybrid,Yellow,National,102,100,7.29
+BS 9889,Hybrid,Yellow,National,103,101,7.03
+BS 9890,Hybrid,Yellow,Luzon,103,95,6.68
+BS 9890,Hybrid,Yellow,Mindanao,103,95,6.68
+C-848,Hybrid,Yellow,National,104,102,7.13
+IPB 9202,Hybrid,Yellow,National,100,101,5.17
+P-3013,Hybrid,Yellow,Luzon,104,101,7
+P-3023,Hybrid,Yellow,National,106,104,7.59
+CW-48,Hybrid,Yellow,Luzon,105,103,6.42
+CW-48,Hybrid,Yellow,Mindanao,105,103,6.42
+CW-108,Hybrid,Yellow,National,103,100,6.52
+ LG 5,OPV,Other,National,101,100,5.81
+CMU 9422,OPV,Other,Luzon,100,100,5.24
+CMU 9422,OPV,Other,Mindanao,100,100,5.24
+CMU 9424,OPV,Other,National,101,100,5.28
+P-30J32,Hybrid,Other,National,105,102,6.6
+P-3012,Hybrid,Other,Luzon,108,100,7.87
+P-30B29,Hybrid,Other,Mindanao,102,104,6.79
+CW 208,Hybrid,Other,National,102,100,6.76
+P-30A10,Hybrid,Other,National,102,102,6.87
+CW 58,Hybrid,Other,National,104,102,6.09
+DK 888,Hybrid,Yellow,National,106,103,6.54
+DK 999,Hybrid,Yellow,National,101,102,7.22
+DK - XPT 9674,Hybrid,Yellow,National,101,101,6.74
+AG 5324,Hybrid,Yellow,Mindanao,98,100,6.46
+AG 8314,Hybrid,Yellow,Mindanao,103,102,6.56
+C 7118,Hybrid,Yellow,National,104,104,8.04
+CGX 04461,Hybrid,Yellow,Luzon,104,103,7.38
+CGX 04461,Hybrid,Yellow,Mindanao,104,103,7.38
+CGX 04468,Hybrid,Yellow,Luzon,104,104,6.67
+CGX 06416,Hybrid,Yellow,Luzon,104,102,6.31
+CPX 3600,Hybrid,Yellow,National,99,100,6.24
+CPX 3601,Hybrid,Yellow,Visayas,100,100,5.99
+CPX 3601,Hybrid,Yellow,Mindanao,100,100,5.99
+CPX 3627,Hybrid,Yellow,National,102,102,7.06
+DK 9572,Hybrid,Yellow,National,105,102,7.19
+P-30A38,Hybrid,Yellow,Luzon,104,103,7.18
+P-30A38,Hybrid,Yellow,Mindanao,104,103,7.18
+P-30A65,Hybrid,Yellow,Luzon,102,102,7.7
+P-30A65,Hybrid,Yellow,Mindanao,102,102,7.7
+TCT 1155,Hybrid,Yellow,Luzon,104,105,6.45
+CMU 9421,OPV,Other,Mindanao,101,102,5.38
+CMU 9423,OPV,Other,Mindanao,101,103,5.4
+CMU 9425,OPV,Other,Mindanao,100,102,5.34
+AG 5325,Hybrid,White,Mindanao,104,102,7.86
+AG 8314 B,Hybrid,Yellow,Mindanao,103,100,7.96
+AG 8374,Hybrid,Yellow,Luzon,103,99,6.97
+C-7122,Hybrid,Yellow,National,103,101,7.4
+C-7286,Hybrid,Yellow,National,104,101,7.78
+C-8010,Hybrid,Yellow,National,104,101,7.43
+P 30A55,Hybrid,Yellow,Luzon,108,102,6.43
+P 30D44,Hybrid,Yellow,Luzon,105,100,6.77
+P 30D44,Hybrid,Yellow,Visayas,105,100,6.77
+BS 9901,Hybrid,Yellow,Luzon,104,103,6.13
+NK 8820,Hybrid,Yellow,Luzon,107,101,6.93
+C-9026,Hybrid,Yellow,National,103,101,6.93
+P-30R49,Hybrid,Yellow,Mindanao,105,103,6
+P-30M50,Hybrid,Yellow,Visayas,103,102,6.08
+P-30M50,Hybrid,Yellow,Mindanao,103,102,6.08
+C-8619,Hybrid,Yellow,Luzon,106,100,7.4
+C-8652,Hybrid,Yellow,National,103,101,7.53
+IES GLUT 2,OPV Glutinous Corn,White,Luzon,71,68,5.54
+USMARC 9902W,Hybrid,White,Luzon,102,100,5.58
+USMARC 9902W,Hybrid,White,Mindanao,102,100,5.58
+USMARC 99149,OPV,Yellow,Visayas,101,103,5.44
+USMARC 99149,OPV,Yellow,Mindanao,101,103,5.44
+BS 9900,Hybrid,Yellow,Luzon,107,101,6.56
+30P60,Hybrid,Yellow,National,105,102,7.69
+NK 8830,Hybrid,Yellow,Luzon,107,103,7.84
+NK 8830,Hybrid,Yellow,Mindanao,107,103,7.84
+TSG 81,Hybrid,Yellow,Luzon,106,100,7.24
+30W30,Hybrid,White,Visayas,103.2,101.7,6.22
+30W30,Hybrid,White,Mindanao,103.2,101.7,6.22
+NK 8840 (Super Jumbo),Hybrid,Yellow,Luzon,105.1,100.7,7.7
+NK 8840 (Super Jumbo),Hybrid,Yellow,Mindanao,105.1,100.7,7.7
+NK 8850,Hybrid,Yellow,Luzon,106.5,101,6.87
+NK 8850,Hybrid,Yellow,Mindanao,106.5,101,6.87
+DEKALB 9051,Hybrid,Yellow,Luzon,103.83,102,7.59
+DEKALB 9051,Hybrid,Yellow,Mindanao,103.83,102,7.59
+DEKALB 868 (PA 8201),Hybrid,Yellow,Mindanao,98,100.3,6.35
+30B80,Hybrid,Yellow,Visayas,105,103.67,5.56
+30P95,Hybrid,Yellow,National,103.9,102.6,7.55
+NK 8860,Hybrid,Yellow,Luzon,106,102,8.9
+Bioseed 9888,Hybrid,Yellow,Mindanao,103,105,7.21
+Bioseed 9909,Hybrid,Yellow,Mindanao,100,100,7.27
+Bioseed 9744,Hybrid,Yellow,Visayas,101,99,5.15
+DK 3668w,Hybrid,Yellow,Visayas,101,105,5.7
+DK 3668w,Hybrid,Yellow,Mindanao,101,105,5.7
+DK 979,Hybrid,Yellow,Luzon,105,101,8.45
+DK 979,Hybrid,Yellow,Visayas,105,101,8.45
+DK 9132,Hybrid,Yellow,Luzon,105,101,8.53
+DK 9132,Hybrid,Yellow,Visayas,105,101,8.53
+CW 821,Hybrid,Yellow,Luzon,104,101,7.55
+CW 811,Hybrid,Yellow,Luzon,104,100,7.39
+CW 801,Hybrid,Yellow,Luzon,103,100,7.55
+USMARC T X 010,Hybrid,White,Visayas,102,103,5.08
+USMARC T X 012,Hybrid,White,Visayas,102,104,5.34
+IES Cn 5,OPV,Yellow,Luzon,105,100,6.39
+IES Glut 4,OPV Glutinous Corn,White,National,98,97,5.3
+Bioseed 9744 Plus,Hybrid,White,Visayas,100,99,5.68
+Bioseed 9744 Plus,Hybrid,White,Mindanao,100,99,5.68
+Ghen 703,Hybrid,Yellow,Luzon,103,102,8.24
+Ghen 802w,Hybrid,White,Visayas,103,101,5.32
+Ghen 802w,Hybrid,White,Mindanao,103,101,5.32
+NK 8870,Hybrid,Yellow,Luzon,105,100,8.64
+NK 8870,Hybrid,Yellow,Visayas,105,100,8.64
+Los Baños White Gold,Hybrid,White,Luzon,104,102,6.44
+IES Glut 6,OPV Glutinous Corn,White,National,98,98,5.31
+IES Glut 7,OPV Glutinous Corn,White,National,97,98,5.54
+TB 8108,Hybrid,Yellow,Luzon,105,100,8.24
+TB 8108,Hybrid,Yellow,Visayas,105,100,8.24
+DK 878,Hybrid Genetically Modified,Other,Mindanao,102,103,7.21
+30M73,Hybrid,Yellow,National,103,102,7.01
+30N34,Hybrid,Yellow,Luzon,107,100,8.4
+CW 831,Hybrid,Yellow,Luzon,107,100,8.61
+DK 818 YG,Hybrid Three-way Cross,Other,National,107,100,8.84
+DK 838 YG,Hybrid,Yellow,National,104,100,8.4
+30Y50,Hybrid,Yellow,Visayas,103,102,6.08
+30Y50,Hybrid,Yellow,Mindanao,103,102,6.08
+30Y34,Hybrid,Yellow,Luzon,105,100,6.77
+30Y75,Hybrid,Yellow,Luzon,102,102,7.7
+30Y75,Hybrid,Yellow,Mindanao,102,102,7.7
+30Y80,Hybrid,Yellow,Luzon,105,103.67,5.6
+30Y80,Hybrid,Yellow,Visayas,105,103.67,5.6
+30Y95,Hybrid,Yellow,National,104,103,7.55
+DK 818-2 (RRC2),Hybrid Genetically Modified,Other,National,103,102,7.58
+DK 868-1 (YG),Hybrid Genetically Modified,Other,Mindanao,98,100,6.35
+DK 909-1 (YG),Hybrid Genetically Modified,Other,National,100.7,99.5,7.62
+DK 9051-1 (YG),Hybrid Genetically Modified,Other,National,103.83,102,7.59
+DK 9161-1(YG),Hybrid Genetically Modified,Other,Luzon,106,100,7.4
+Nk 6204,Hybrid,Yellow,National,106,104,7.17
+Bioseed 9899,Hybrid,Yellow,Luzon,104,103,7.21
+Bioseed 9899,Hybrid,Yellow,Mindanao,104,103,7.21
+NK 6614,Hybrid,Yellow,Luzon,106,104,7.28
+NK 6614,Hybrid,Yellow,Mindanao,106,104,7.28
+Filipina 753,Hybrid,Yellow,Mindanao,104,104,5.61
+NK 6624,Hybrid,Yellow,Mindanao,104,106,7.08
+CW 847,Hybrid,Yellow,Mindanao,102,102,5.57
+CW 848,Hybrid,Yellow,Mindanao,104,104,5.38
+G 804,Hybrid,White,Visayas,102,103,6
+G 804,Hybrid,White,Mindanao,102,103,6
+IPB Var 9 ,OPV,Yellow,Mindanao,105,105,5.04
+USM Var 16,OPV,White,Luzon,103,102,5.78
+USM Var 16,OPV,White,Mindanao,103,102,5.78
+USM Var 18,OPV,White,Luzon,103,100,5.41
+USM Var 18,OPV,White,Mindanao,103,100,5.41
+IES 89-10,OPV,White,Luzon,105,98,5.52
+IES 89-12,OPV,White,Luzon,105,97,5.48
+TSG 80,Hybrid,Yellow,Luzon,105,102,7.1
+TSG 80,Hybrid,Yellow,Mindanao,105,102,7.1
+TSG 89,Hybrid,Yellow,Luzon,102,103,7.39
+TSG 89,Hybrid,Yellow,Mindanao,102,103,7.39
+Cw 18-69,Hybrid,Yellow,Luzon,102,103,8.46
+Cw 18-69,Hybrid,Yellow,Mindanao,102,103,8.46
+CW 44-81,Hybrid,Yellow,Luzon,102,102,8.88
+CW 44-81,Hybrid,Yellow,Mindanao,102,102,8.88
+NK 6745,Hybrid,Yellow,Luzon,103,101,8.2
+NK 6745,Hybrid,Yellow,Mindanao,103,101,8.2
+NK 32W,Hybrid,Yellow,Mindanao,102,104,5.44
+30B42,Hybrid,Yellow,Luzon,106,102,7.47
+CW 850,Hybrid,Yellow,Mindanao,106,105,5.39
+CW 851,Hybrid,Yellow,Luzon,104,103,7.91
+CW 1441,Hybrid,Yellow,Luzon,106,103,7.2
+CW 1441,Hybrid,Yellow,Mindanao,106,103,7.2
+TSG 398,Hybrid,Yellow,Luzon,102,105,7.79
+TSG 388,Hybrid,Yellow,Mindanao,101,104,6
+TSG 366,Hybrid,Yellow,Mindanao,102,106,5.95
+Bioseed 9540,Hybrid,Yellow,Luzon,104,105,8.05
+Bioseed 9540,Hybrid,Yellow,Mindanao,104,105,8.05
+30W40,Hybrid,White,Visayas,102,101,6.93
+USM Var 22,OPV,White,Luzon,105,103,5.89
+USM Var 20,OPV,White,Luzon,107,102,5.97
+USM Var 20,OPV,White,Visayas,107,102,5.97
+GSI 96,Hybrid,Yellow,Mindanao,101,103,6.41
+USM-DA Syn 0205                 USM Var 24,Hybrid,Yellow,Luzon,101,103,6.07
+CW 1401,Hybrid,Yellow,Luzon,108,104,7.4
+CW 789,Hybrid,Yellow,Luzon,105,104,7.86
+NK 6654,Hybrid,Yellow,Luzon,105,101,8.65
+NK 6654,Hybrid,Yellow,Visayas,105,101,8.65
+NK 6645,Hybrid,Yellow,National,105,104,7.55
+NK 6226,Hybrid,Yellow,Luzon,107,103,7.96
+NK 6226,Hybrid,Yellow,Mindanao,107,103,7.96
+NK 6626,Hybrid,Yellow,Luzon,108,105,7.96
+NK 6626,Hybrid,Yellow,Mindanao,108,105,7.96
+Bioseed 9541,Hybrid,Yellow,Visayas,103,103,7.59
+Bioseed 9541,Hybrid,Yellow,Mindanao,103,103,7.59
+Bioseed 9542,Hybrid,Yellow,National,105,103,7.2
+PAC 105,Hybrid,Yellow,National,107,106,7.37
+PAC 555,Hybrid,Yellow,Luzon,108,106,7.19
+PAC 259,Hybrid,Yellow,Luzon,109,102,7.59
+P 3482,Hybrid,Yellow,Mindanao,102,104,6.48
+Mt. Apo Gold 900y,OPV,Yellow,Luzon,106,102,6.1
+IPB Var 13,OPV,Yellow,Luzon,107,102,6.76
+IPB Var 13,OPV,Yellow,Visayas,107,102,6.76
+IPB Comp 3,OPV,Yellow,National,104,101,6.27
+Mt. Apo Cristal 800w,OPV,White,Luzon,108,102,5.78
+Mt. Apo Cristal 800w,OPV,White,Visayas,108,102,5.78
+IPB Var 8,OPV,White,Luzon,105,98,5.32
+IPB Var 8,OPV,White,Mindanao,105,98,5.32
+Var 6,OPV,White,Luzon,105,101,5.84
+Var 6,OPV,White,Visayas,105,101,5.84
+DK 5885 RRC2,Hybrid Genetically Modified,Other,National,107,105,7.07
+BC 9543,Hybrid,Yellow,Luzon,108,105,6.86
+BC 9543,Hybrid,Yellow,Visayas,108,105,6.86
+CW 1407,Hybrid,Yellow,Mindanao,101,103,5.71
+30B48,Hybrid,Yellow,Mindanao,106,105,6.2
+NK 6297,Hybrid,Yellow,Luzon,109,105,6.45
+NK 6297,Hybrid,Yellow,Mindanao,109,105,6.45
+CW 159W,Hybrid,White,Visayas,106,107,6.26
+CW 159W,Hybrid,White,Mindanao,106,107,6.26
+NK 5012W,Hybrid,White,Visayas,106,102,7.02
+NK 5013W,Hybrid,White,Visayas,103.7,103,6.56
+X7B 445,Hybrid,Yellow,Mindanao,103,106,7.18
+Healer 101,Hybrid,Yellow,Luzon,105,102,7.93
+KK 168,Hybrid,Yellow,Mindanao,108,104,6.39
+S 6208,Hybrid,Yellow,National,108,105,7.29
+S 6218,Hybrid,Yellow,National,107.6,106,7.31
+P 3776,Hybrid,Yellow,Luzon,106,102,7.93
+P 3776,Hybrid,Yellow,Visayas,106,102,7.93
+TF 8129,Hybrid,Yellow,Luzon,110,106,7.99
+TF 8129,Hybrid,Yellow,Mindanao,110,106,7.99
+PD 8230,Hybrid,Yellow,Luzon,105,103,7.66
+PD 8230,Hybrid,Yellow,Mindanao,105,103,7.66
+BC 81163,Hybrid,Yellow,Luzon,109,107,7.17
+BC 81163,Hybrid,Yellow,Mindanao,109,107,7.17
+BC 42683,Hybrid,Yellow,Luzon,109,106,7.48
+DANA 1107,Hybrid,Yellow,Luzon,105,101,7.18
+DANA 1107,Hybrid,Yellow,Visayas,105,101,7.18
+DANA 8255,Hybrid,Yellow,Luzon,106,102,6.97
+DANA 8255,Hybrid,Yellow,Visayas,106,102,6.97
+TSG 222,Hybrid,Yellow,Luzon,111,103,7.4
+TSG 222,Hybrid,Yellow,Mindanao,111,103,7.4
+TSG 361,Hybrid,Yellow,Luzon,100,109,7.21
+TSG 361,Hybrid,Yellow,Mindanao,100,109,7.21
+CW 112w,Hybrid,White,Visayas,104,102,6.81
+TSG 108w,Hybrid,White,Visayas,100,103,6.55
+TSG 108w,Hybrid,White,Mindanao,100,103,6.55
+USM Var 30,Hybrid,White,Visayas,100,103,6.23
+BIO #1,OPV,White,Mindanao,106,103,5.19
+USM Var 28,OPV,White,Visayas,100,103,4.59
+MMSU Glut 1,OPV Glutinous Corn,White,Luzon,99,94,5.61
+H 212 wx Glut,OPV Glutinous Corn,White,Luzon,105,100,5
+SAMPANN,Hybrid,Yellow,Luzon,108,106,7.93
+S 6219,Hybrid,Yellow,National,107,108,8.2
+S 6259,Hybrid,Yellow,National,107,103,8.08
+J757,Hybrid,Yellow,Visayas,102,102,7.26
+J707,Hybrid,Yellow,Visayas,100,102,7.15
+J505,Hybrid,Yellow,Luzon,101,103,7.9
+J505,Hybrid,Yellow,Mindanao,101,103,7.9
+IES 09-2w,OPV,White,Luzon,107,100,5.38
+EG 501,Hybrid,Yellow,Luzon,108,101,7.2
+EG 501,Hybrid,Yellow,Visayas,108,101,7.2
+ S 6689,Hybrid,Yellow,National,109,105,7.9
+S 6410,Hybrid,Yellow,National,106,104.5,7.73
+PAC339,Hybrid,Yellow,Luzon,107.3,103,7.06
+PAC339,Hybrid,Yellow,Visayas,107.3,103,7.06
+PAC 999 Super,Hybrid,Yellow,Luzon,108,197.1,7.11
+PAC 999 Super,Hybrid,Yellow,Visayas,108,197.1,7.11
+P 4097,Hybrid,Yellow,Luzon,110,103,7.24
+P 3668,Hybrid,Yellow,Luzon,110,102.4,7.68
+X8B649,Hybrid,Yellow,Luzon,107,103,7.76
+X8B649,Hybrid,Yellow,Visayas,107,103,7.76
+CW 1630,Hybrid,Yellow,Luzon,107.5,104,7.57
+CW 1630,Hybrid,Yellow,Visayas,107.5,104,7.57
+BIO 62556,Hybrid,Yellow,Luzon,109,103,7.52
+DK 6919,Hybrid,Yellow,Luzon,106,102,7.47
+DK 6919,Hybrid,Yellow,Visayas,106,102,7.47
+USM Var 32,OPV,White,Luzon,110,100,5.52
+IPB Glut Q OB,OPV Special Type,White,Luzon,103,101,4.43
+IPB Glut Q OB,OPV Special Type,White,Mindanao,103,101,4.43
+IPB Glut Q LB,OPV Special Type,White,Luzon,103,100,4.37
+IPB Glut Q LB,OPV Special Type,White,Mindanao,103,100,4.37
+DK 7878RRC2,Hybrid,Yellow,Luzon,105,104,7.35
+DK 7878RRC2,Hybrid,Yellow,Mindanao,105,104,7.35
+P3645 YR,Hybrid,Yellow,Mindanao,107.4,106,6.48
+DK 6818,Hybrid,Yellow,National,104,105,7.89
+X5,Hybrid,Yellow,Luzon,104,102,7.36
+X5,Hybrid,Yellow,Visayas,104,102,7.36
+BIO 81163,Hybrid,Yellow,National,108,111.6,5.94
+BIO 91538,Hybrid,Yellow,Luzon,106,105,7.11
+BIO 91538,Hybrid,Yellow,Mindanao,106,105,7.11
+EG 701,Hybrid,Yellow,Visayas,103,102,7.64
+IES Cn 7y,OPV,Yellow,National,107.8,104.3,5.73
+IES Cn9,OPV,Yellow,National,104,104,5.92
+IES 10-04w,OPV,White,Luzon,106,102,5.31
+IES 10-04w,OPV,White,Visayas,106,102,5.31
+USM Var 34,OPV,White,Luzon,110,100,6.25
+P 4097 YR,Hybrid,Yellow,Luzon,108,104,6.88
+P 3990 YR,Hybrid,Yellow,Luzon,110,104,7.34
+P 3774 YR,Hybrid,Yellow,Luzon,108,103,7.79
+P 3774 YR,Hybrid,Yellow,Mindanao,108,103,7.79
+TEOSINTE 200,Hybrid,Yellow,Luzon,106,106,7.36
+B1001236,Hybrid,Yellow,Luzon,106,103,6.82
+CSC Var 1,OPV,Yellow,Luzon,104,100,6.05
+USM Var 40,OPV,White,Luzon,107,105,6.02
+USM Var 40,OPV,White,Mindanao,107,105,6.02
+USM Var 38,OPV,White,Mindanao,108,108,5.82
+USM Var 36,OPV,White,Luzon,103,104,6.09
+USM Var 36,OPV,White,Mindanao,103,104,6.09
+USM nch 33,OPV Non-Inbred Hybrid Variety,Yellow,National,105,104,7.47
+USM nch 35,OPV Non-Inbred Hybrid Variety,White,National,106,104,6.89
+IES Glut 10,OPV Glutinous Corn,White,Mindanao,104,104,4.24
+IES Glut 8,OPV Glutinous Corn,White,Visayas,104,101,4.56
+IES Glut 8,OPV Glutinous Corn,White,Mindanao,104,101,4.56
+IES Cn 11y,OPV,Yellow,Luzon,107,105,6.23
+IES Cn 11y,OPV,Yellow,Mindanao,107,105,6.23
+CW-RHB 701,Hybrid,Yellow,Luzon,108.6,105,7.55
+BH 102 G,Hybrid,Yellow,Luzon,104.4,107.66,8.31
+EG 803w ,Hybrid,White,Mindanao,107,104,7
+SMQ 6349w,Hybrid,White,Visayas,102.3,101.66,5.92
+USM nch 39,OPV,Yellow,National,113.7,103.3,6.66
+USM nch 37,OPV,Yellow,National,105.3,102,6.57
+CVRC Cn 13,OPV,Yellow,Mindanao,104.25,107.33,5.65
+White Flint  12-06,OPV,White,Luzon,105.11,100.33,5.77
+White Flint  12-06,OPV,White,Mindanao,105.11,100.33,5.77
+B9540R,Hybrid Genetically Modified,Yellow,Luzon,105,105,10.37
+B9541R,Hybrid Genetically Modified,Yellow,Luzon,103,103,9.09
+B9909R,Hybrid Genetically Modified,Yellow,Mindanao,100,,8.54
+B9909G,Hybrid Genetically Modified,Yellow,Mindanao,100.5,,8.24
+P3640WR,Hybrid Genetically Modified,Yellow,Mindanao,102,101,5.2
+8899C,Hybrid Single Cross,Yellow,Luzon,104.7,104,8.84
+8899C,Hybrid Single Cross,Yellow,Visayas,104.7,104,8.84
+6777C,Hybrid Single Cross,Yellow,National,104.8,102.6,8.27
+CW HR8,Hybrid Single Cross,Yellow,Luzon,105,107,7.65
+CW-RHB 709,Hybrid Single Cross,Yellow,Luzon,107,104,7.98
+EG 501,Hybrid Modified Single Cross,Yellow,National,108,108,7.12
+USM Var 41,OPV,Yellow,Visayas,103,102,7.74
+USM Var 41,OPV,Yellow,Mindanao,103,102,7.74
+MMSU Glut 2,OPV Glutinous Corn,White,Visayas,99,98,5.33
+DEKALB 6818S Genuity ®,Hybrid,Yellow,Luzon,105,,9.63
+DEKALB 6818S Genuity ®,Hybrid,Yellow,Mindanao,105,,9.63
+DEKALB 6919S Genuity ®,Hybrid,Yellow,Luzon,104,,9.64
+DEKALB 6919S Genuity ®,Hybrid,Yellow,Mindanao,104,,9.64
+DEKALB 7898S Genuity ®,Hybrid,Yellow,Luzon,105,,9.38
+DEKALB 7898S Genuity ®,Hybrid,Yellow,Mindanao,105,,9.38
+DK 6999,Hybrid,Yellow,National,106,105,10.1
+B9545,Hybrid,Yellow,Luzon,106,101,11.39
+B9540G,Hybrid,Yellow,Luzon,,108,6.26
+B9541G,Hybrid,Yellow,Luzon,,105,8.46
+P4124YR,Hybrid,Yellow,Mindanao,103.8,106.5,7.94
+P3774R,Hybrid,Yellow,Luzon,108,103.75,7.87
+P4097R,Hybrid,Yellow,Luzon,106.4,102.5,7.95
+NK6410BtGT,Hybrid Genetically Modified,Yellow,Luzon,108,106,8.56
+NK6410BtGT,Hybrid Genetically Modified,Yellow,Mindanao,108,106,8.56
+Agrisure NK8840 EZ Refuge,Hybrid Genetically Modified,Yellow,Luzon,109,106,8.17
+Agrisure NK8840 EZ Refuge,Hybrid Genetically Modified,Yellow,Mindanao,109,106,8.17
+PR 8719,Hybrid,Yellow,National,108,104,9.48
+PR 8531,Hybrid,Yellow,National,107,103,9.13
+PR 9118,Hybrid,Yellow,National,108,104,9.2
+CVRC Cn 15,OPV,Yellow,Luzon,106,104,5.32
+MMSU Glut 3,OPV Glutinous Corn,White,Luzon,98,96,5.2
+CVRC Glut No. 12,OPV Glutinous Corn,White,Luzon,103,99,4.68
+CVRC Glut No. 12,OPV Glutinous Corn,White,Mindanao,103,99,4.68
+DK 6999S,Hybrid Genetically Modified,Yellow,Luzon,110,104,7.76
+DK 6999S,Hybrid Genetically Modified,Yellow,Mindanao,110,104,7.76
+DEKALB 9898S,Hybrid Genetically Modified,Yellow,Luzon,108,103,7.63
+DEKALB 9898S,Hybrid Genetically Modified,Yellow,Mindanao,108,103,7.63
+NK 306BtGt,Hybrid Genetically Modified,Yellow,Luzon,110,105,8.65
+NK 306BtGt,Hybrid Genetically Modified,Yellow,Mindanao,110,105,8.65
+NK 6505BtGt,Hybrid Genetically Modified,Yellow,Luzon,109,104,8.47
+NK 6505BtGt,Hybrid Genetically Modified,Yellow,Mindanao,109,104,8.47
+P3774YHR,Hybrid Genetically Modified,Yellow,Luzon,108,,6.66
+P3774YHR,Hybrid Genetically Modified,Yellow,Mindanao,108,,6.66
+P4124YHR,Hybrid Genetically Modified,Yellow,Mindanao,115,,10.5
+B9545RR,Hybrid Genetically Modified,Yellow,Luzon,107,,8.96
+J505,Hybrid Genetically Modified,Yellow,Luzon,,102,9.36
+J505,Hybrid Genetically Modified,Yellow,Mindanao,,102,9.36
+PAC 139,Hybrid,Yellow,National,107,,8.37
+PAC 779,Hybrid,Yellow,Mindanao,104,109.4,8.56
+BC91528,Hybrid,Yellow,Luzon,104.4,103.4,6.84
+BC91528,Hybrid,Yellow,Visayas,104.4,103.4,8.48
+AH SUPREME 5150,Hybrid Biotech Stack -Trait ,Other,Mindanao,107.2,106.6,7.27
+P3530YHR,Hybrid Biotech Stack -Trait ,Other,Luzon,109.25,105.8,7.65
+P3530YHR,Hybrid Biotech Stack -Trait ,Other,Mindanao,109.25,105.8,8.36
+P3530R,Hybrid Biotech RR ,Other,Luzon,109,106,8.56
+P3530R,Hybrid Biotech RR ,Other,Mindanao,109,106,8.56
+PAC 777,Hybrid Conventional,Other,Mindanao,105,106,8.53
+K-509,Hybrid Conventional,Other,Mindanao,103,107,8.52
+K-511,Hybrid Conventional,Other,Mindanao,102,105,8.83
+PAC 1510003,Hybrid Conventional,Other,Visayas,104,103,8.01
+PAC 1510066,Hybrid Conventional,Other,Visayas,104,101,7.29
+IPB 1910,OPV,Other,Luzon,107,104,4.65
+PAC 339 VT2 PRO,Hybrid Biotech Stack -Trait ,Other,Luzon,106,,7.7
+PAC 999 VT2 PRO,Hybrid Biotech Stack -Trait ,Other,Luzon,105,,7.9
+B9545G,Hybrid Biotech Stack -Trait ,Other,Luzon,107,,8.8
+B9899G,Hybrid Biotech Stack -Trait ,Other,Luzon,105,,9.12
+B9899G,Hybrid Biotech Stack -Trait ,Other,Mindanao,105,,8.94
+H101G,Hybrid Biotech Stack -Trait ,Other,Luzon,104,,10
+H102G,Hybrid Biotech Stack -Trait ,Other,Luzon,106,,10.7
+DK8899S,Hybrid Biotech Stack -Trait ,Other,Luzon,106,106,9.2
+DK8899S,Hybrid Biotech Stack -Trait ,Other,Mindanao,106,106,8.26
+SS6414BtGt,Hybrid Biotech Stack -Trait ,Other,Luzon,109,108,9.12
+SS6414BtGt,Hybrid Biotech Stack -Trait ,Other,Mindanao,109,108,9.45
+P4097YHR,Hybrid Biotech Stack -Trait ,Other,Luzon,120,,6.6
+FARCO 58,OPV,Other,Visayas,104,104,7.33
+FARCO 58,OPV,Other,Mindanao,104,104,5.57
+MMSU BMIR Glut1,OPV Glutinous Corn,White,Luzon,103,101,5.36
+CVRC Glut# 18-14,OPV Glutinous Corn,White,Luzon,103,100,4.78
+CVRC Glut# 18-14,OPV Glutinous Corn,White,Visayas,103,100,5.6
+FARCO 88,Hybrid Conventional,Other,Mindanao,107,106,6.34
+K-508,Hybrid Conventional,Other,Mindanao,108,108,7.64
+DEKALB®9118S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Luzon,108,106,10.06
+DEKALB®9118S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Mindanao,108,106,8.9
+DEKALB®8719S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Luzon,108,106,10.3
+DEKALB®8719S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Mindanao,108,106,8.79
+DEKALB®9919S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Luzon,107,105,7.79
+DEKALB®9919S VTDoublePro RIB Complete,Hybrid Biotech Stack -Trait ,Other,Mindanao,107,105,7.79
+IPB Var DM1,OPV,Other,Mindanao,107,106,5.25
+CW 1840,Hybrid Conventional,Yellow,Luzon,106,105,8.43
+CW 1777,Hybrid Conventional,Yellow,Luzon,110,103,8.64
+P3582YHR,Hybrid Conventional,Yellow,Mindanao,105,105,9.1
+P3585YHR,Hybrid Conventional,Yellow,Luzon,105,107,8.89
+DEKALB®8282S VTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Luzon,108,105,9.11
+DEKALB®8282S VTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Mindanao,108,105,9.11
+DEKALB®8131S VTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Mindanao,107,107,7.99
+NK306 BGT,Hybrid Conventional,Yellow,Mindanao,,103,10.82
+NK6410 BGT,Hybrid Conventional,Yellow,Mindanao,,103,10.89
+NK6414 BGT,Hybrid Conventional,Yellow,Luzon,,105,11.73
+NK6414 BGT,Hybrid Conventional,Yellow,Mindanao,,105,11.73
+NK6505 BGT,Hybrid Conventional,Yellow,Mindanao,,104,11.06
+PT8130S VTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Mindanao,109,107,7.65
+PT8228S VTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Mindanao,106,108,7.29
+CW 476,Hybrid Conventional,Yellow,Luzon,108,105,9.44
+PU9044SVTDoublePRO RIB Complete,Hybrid Conventional,Yellow,Mindanao,109,110,7.98
+P3660YHR,Hybrid Conventional,Yellow,Mindanao,108,109,7.95
+P3532YHR,Hybrid Conventional,Yellow,Luzon,109,107,10.04
+P3532YHR,Hybrid Conventional,Yellow,Mindanao,109,107,8.31
+NK6035 BGT,Hybrid Conventional,Yellow,Mindanao,109,107,8.58
+NK6270 BGT,Hybrid Conventional,Yellow,Luzon,109,105.5,9.47
+NK6270 BGT,Hybrid Conventional,Yellow,Mindanao,109,105.5,8.28

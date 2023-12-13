@@ -1,0 +1,51 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">S.N.</th>
+            <th class="text-center">Pest Name</th>
+            <th class="text-center">Pest Damage</th>
+            <th class="text-center">Pest Life Cycle</th>
+            <th class="text-center">Pest Control</th>
+            <th class="text-center">Pest Photo</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pest in pest_data %}
+            <tr>
+                <td class="text-center">{{ loop.index }}</td>
+                <td class="text-center">{{ pest.pest_name }}</td>
+                <td class="text-center">{{ pest.pest_damage }}</td>
+                <td class="text-center">{{ pest.pest_cycle }}</td>
+                <td class="text-center">{{ pest.pest_control }}</td>
+                <td class="text-center">
+                    {% if pest.pest_photo %}
+                        <img src="{{ url_for('static', filename='pest_photo/' + pest.pest_photo) }}" alt="Pest Photo" class="img-thumbnail">
+                    {% endif %}
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-info" data-id="{{ pest.pest_id }}" data-target="#updateModal" onclick="updatePest(this)" type="button">Edit</button>
+                    <button class="btn btn-danger" {% if pest.pest_id %}data-id="{{ pest.pest_id }}"{% endif %} onclick="deletePest(this)" type="button">Delete</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    
+</table>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+<script>
+    document.querySelectorAll('.btn-info').forEach(button => {
+        button.addEventListener('click', updatePest);
+    });
+
+    document.querySelectorAll('.btn-danger').forEach(button => {
+        button.addEventListener('click', deletePest);
+    });
+
+</script>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../DSS"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"powershell.cwd": "flask"
+	}
+}

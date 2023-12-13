@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6bc746904.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        body {
+            background-color: whitesmoke;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: #FBF46D;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .container-fluid {
+            margin: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 70%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #1fb41a;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        img {
+            margin-left: 20px;
+        }
+
+        .edit-form label,
+        .edit-form input {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav nav-tabs" id="v-pills-tab" role="tablist">
+            <a class="nav-link " href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link active" id="v-pills-history-tab" data-toggle="pill" href="#v-pills-history" role="tab" aria-controls="v-pills-hiso" aria-selected="false">History</a>
+            <a class="nav-link" id="v-pills-edit-tab" data-toggle="pill" href="#v-pills-edit" role="tab" aria-controls="v-edit-m" aria-selected="false">Edit Profile</a>
+            <a class="nav-link" id="v-pills-password-tab" data-toggle="pill" href="#v-pills-password" role="tab" aria-controls="v-pills-password" aria-selected="false">Change Password</a>
+            <a class="nav-link" id="v-pills-delete-tab" data-toggle="pill" href="#v-pills-delete" role="tab" aria-controls="v-pills-delete" aria-selected="false">DELETE ACCOUNT</a>
+            <a class="nav-link" href="{{ url_for('logout') }}">LOGOUT</a>
+        </div>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="container">
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <div class="container-fluid">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-history" role="tabpanel" aria-labelledby="v-pills-history-tab">
+            
+            {% block content %}
+                <h2>{{ current_user.username }}'s history!</h2><br>
+            
+                <ul>
+                    {% if user_history_entries %}
+                        {% for entry in user_history_entries %}
+                            <li>{{ entry.hist_id }} - {{ entry.hist_timestamp }} - {{ entry.hist_action }} - {{entry.hist_details}}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li>No history entries found.</li>
+                    {% endif %}
+                </ul>
+            {% endblock %}
+            
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-edit" role="tabpanel" aria-labelledby="v-pills-edit-tab">
+                <form action="{{ url_for('update_profile') }}" method="post" class="edit-form">
+
+                    <label for="newUsername">Current Username: </label>
+                    <input type="text" id="newUsername" name="newUsername" value="{{ current_user['username'] }}" required>
+
+                    <label for="newFirstname">Current First Name: </label>
+                    <input type="text" id="newFirstname" name="newFirstname" value="{{ current_user['firstname'] }}" required>
+
+                    <label for="newLastname">Current Last Name: </label>
+                    <input type="text" id="newLastname" name="newLastname" value="{{ current_user['lastname'] }}" required>
+
+                    <label for="newEmail">Current Email:</label>
+                    <input type="text" id="newEmail" name="newEmail" value="{{ current_user['email'] }}" required>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-passsword-tab">
+                <form action="{{ url_for('update_password') }}" method="post" class="edit-form">
+                    <label for="oldPassword">Old Password:</label>
+                    <input type="password" id="oldPassword" name="oldPassword" required>
+
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required>
+
+                    <button type="submit" name="updatePassword">Update Password</button>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-delete" role="tabpanel" aria-labelledby="v-pills-delete-tab">
+                <form action="{{ url_for('delete_account') }}" method="post" onsubmit="return confirmDelete()" class="edit-form">
+                    <button type="submit" name="delete" class="delete-account" style="background-color: red; color: white;">Delete Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function confirmDelete() {
+            console.log('Delete button clicked!');
+            // Add your confirmation logic here
+            return confirm('Are you sure you want to delete your account?');
+        }
+    </script>
+</body>
+</html>

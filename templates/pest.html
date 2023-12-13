@@ -1,0 +1,322 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a6bc746904.js" crossorigin="anonymous"></script>
+    <title>MaizExpert</title>
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        *{
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar{
+            background-color: rgb(255, 233, 108);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-right: 15px;
+            padding-left: 100px;
+            float: flex;
+        }
+        .navdiv{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .logo a{
+            font-size: 35px;
+            font-weight: 600;
+            color: rgb(0, 122, 10);
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+        li a{
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+        .container {
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            margin-top: 40px;
+        }
+        h1 {
+            color: #ffa500;
+        }
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .checkbox-item {
+            width: 20%; /* Four checkboxes in a row */
+            text-align: left;
+            margin: 5px;
+        }
+        #result-section {
+            margin-top: 20px;
+            display: none;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+
+        .logo{
+            height: 4rem;
+            width: 19rem;
+        }
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            height: 70px;
+            background-color: white;
+            padding: 0 8%;
+        }
+
+        .navbar-logo{
+            cursor: pointer;
+        }
+
+        .navbar-list{
+            width: 100%;
+            text-align: right;
+            padding-right: 2rem; 
+        }
+
+        .navbar-list li{
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .navbar-list li a{
+            font-size: 1 rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+        .navbar li a:hover {
+            color: #1fb41a;}
+        
+        .navbar li a::before {
+            content: ""; /* Added pseudo-element for underline */
+            position: absolute;
+            width: 100%;
+            height: 2px; /* Adjusted height for underline */
+            background-color: #1fb41a;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar li a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .profile-dropdown{
+            position: relative;
+            width: fit-content;
+        }
+
+        .profile-dropdown-btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 2px solid #1fb41a;
+            border-radius: 50px;
+            width: 200px;
+            transition: box-shadow .2s, background-color 0.2s;
+        }
+
+        .profile-dropdown-btn:hover{
+            background-color:  #FBF46D;
+            box-shadow: black;
+        }
+
+        .profile-img{
+            position: relative;
+            width: 2rem;
+            height: 2rem;
+            background: url(../images/profpic.png);
+            background-size: cover;
+        }
+        .profile-img i{
+            position: absolute;
+            right: 0;
+            bottom: 0.1rem;
+            font-weight: 0.1rem;
+            color: green;
+        }
+
+        .user-info{
+            display: flex;
+            align-items: center;}
+
+        .user-info h4{
+            font-weight: 400;}
+
+        .user-info img{
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 15px;}
+
+        .profile-dropdown-btn span{
+            margin: 0 0.5rem;
+            margin-right: 0;
+        }
+
+        .profile-dropdown-list{
+            position: absolute;
+            top: 68px;
+            width: 200px;
+            right: 60px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: black;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .profile-dropdown-list.active{
+            max-height: 500px;
+        }
+
+        .profile-dropdown-list hr{
+            border: .5px solid black;
+        }
+
+        .profile-dropdown-list-item{
+            padding: 0.5rem 0 0.5rem 1rem;
+        }
+
+        .profile-dropdown-list-item:hover{
+            padding-left: 1.5rem;
+            background-color:  #FBF46D;
+        }
+
+        .profile-dropdown-list-item a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: black;
+        }
+
+        .profile-dropdown-list-item a i{
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+            width: 2.3rem;
+            height: 2.3rem;
+            background-color: rgb(88, 219, 31);
+            color: white;
+            line-height: 2.3rem;
+            text-align: center;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" class="logo">
+        <ul class="navbar-list">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">Pest and Disease</a></li>
+            <li><a href="{{ url_for('aboutus') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <div class="profile-dropdown-btn" onclick="toggle()">
+                <div class="user-info">
+                    <img src="{{ url_for('static', filename='images/profpic.png') }}" alt="">
+                    <p>Welcome, {{ user.username }}!</p>
+                </div>
+                <span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+             </div>
+        </div>
+        <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+                <div class="user-info">
+                    <img src="{{ url_for('static', filename='images/profpic.png') }}" alt="">
+                    <p>{{ user.firstname }} {{ user.lastname }}</p> 
+                </div>
+            </li>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('profile') }}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    Edit Profile 
+                </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('profile') }}">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: #000000;"></i>
+                    History 
+                </a>
+            </li>
+            <hr>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('logout') }}">
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #000000;"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+        <div class="container">
+            <h3>Pest and Disease Guide</h3>
+            <p>Check the symptoms that your corn is experiencing:</p>
+            <div class="checkbox-container">
+                <!-- Checkbox 1 to 10 -->
+                
+            </div>
+            <button id="generateResult">Generate Result</button>
+        </div>
+        <script>
+            let profileDropdownList = document.querySelector(".profile-dropdown-list");
+            let btn = document.querySelector(".profile-dropdown-btn");
+    
+            const toggle = () => profileDropdownList.classList.toggle("active");
+    
+            window.addEventListener('click',function(e){
+                if(!btn.contains(e.target))profileDropdownList.classList.remove('active');
+            });
+        </script>
+    
+    </header>
+</body>
+</html>

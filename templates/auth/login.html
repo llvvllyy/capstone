@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container login-form"> 
+        <h2>LOGIN</h2>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-warning" id="flash-messages">
+                    <ul style="list-style-type: none; padding: 0; margin: 0; font-weight: bold; text-align: justify; color: rgb(246, 72, 72);">
+                        {% for message in messages %}
+                            <li>{{ message | safe }} <span class="close-flash" onclick="closeFlash(this)">x</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+
+        <form action="{{ url_for('login') }}" method="post">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p style="text-align: center; margin-top: 15px;">
+            Don't have an account yet? 
+            <a href="{{ url_for('register') }}" class="registration-link">Click Here</a>
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    function closeFlash(element) {
+        $(element).parent().remove();  // Remove the entire <li> element when 'x' is clicked
+    }
+</script>
+
+</html>

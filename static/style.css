@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+/*****************LogIn********************/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #fff;
+    height: 100vh;
+    /* Make the body take the full height of the viewport */
+}
+
+.form-container {
+    width: 80%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #9ADE7B;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button {
+    background-color: black;
+    /* Color for Register button */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9ADE7B;
+    /* Hover color for Register button */
+    color: black;
+}
+
+.login-form button {
+    background-color: black;
+    /* Color for Login button */
+}
+
+.login-form button:hover {
+    background-color: #EEF296;
+    /* Hover color for Login button */
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 5;
+    margin-bottom: 5px;
+    font-size: 25px;
+    /* Increased margin for better spacing */
+    color: #333;
+}
+
+.registration-link {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.registration-link:hover {
+    color: #f1fa4e;
+}
+
+.close-flash {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    color: red;
+}
+
+/* *******************REGISTER************ */
+
+.form-container-register {
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #EEF296;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register input {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #9ADE7B;
+    color: black;
+}
+
+.login-link,
+.registration-link {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link:hover,
+.registration-link:hover {
+    color: #7ee150;
+}
+
+/* **********ADMIN************ */
+
+
+/*************** admin dashboard styling *******************/
+.card {
+    /* width: 100%; */
+    margin-bottom: 20px;
+    background-color: #54B435;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 5px 5px #54B435;
+}
+
+/**************** for sidebar *******************************/
+.sidebar {
+    height: 100%;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #54B435;
+    overflow-x: hidden;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    padding: 8px 15px 8px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar .side-header {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.side-header img {
+    margin-left: 50px;
+}
+
+.sidebar a:hover {
+    background-color: #584e46;
+    transform: translate(5px, -5px);
+}
+
+/************* Data table styling **************************/
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-left: -70px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+    border-radius: 12px 12px 0 0;
+}
+
+td,
+th {
+    padding: 5px 5px;
+    text-align: center;
+}
+
+th {
+    background-color: #584e46;
+    color: #fafafa;
+    font-family: 'Open Sans', Sans-serif;
+    font-weight: bold;
+}
+
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}

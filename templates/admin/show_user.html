@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">S.N.</th>
+            <th class="text-center">Username</th>
+            <th class="text-center">Firstname</th>
+            <th class="text-center">Lastname</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in user_data %}
+            <tr>
+                <td class="text-center">{{ loop.index }}</td>
+                <td class="text-center">{{ user.username }}</td>
+                <td class="text-center">{{ user.firstname }}</td>
+                <td class="text-center">{{ user.lastname }}</td>
+                <td class="text-center">{{ user.email }}</td>
+                <td class="text-center">
+                    <button class="btn btn-danger" {% if user.user_id %}data-id="{{ user.user_id }}"{% endif %} onclick="deleteUser(this)" type="button">Delete</button>
+                    <script>
+                        console.log('User ID:', '{{ user.user_id }}');  // Change this line
+                    </script>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    
+</table>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+

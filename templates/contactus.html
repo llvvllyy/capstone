@@ -1,0 +1,494 @@
+<!DOCTYPE html >
+<html lang = "en" >
+<head >
+    <meta charset = "UTF-8" >
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a6bc746904.js" crossorigin="anonymous"></script>
+    <title > MaizExpert </title >
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+            *{
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+            }
+            .navbar{
+                background-color: rgb(255, 233, 108);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding-right: 15px;
+                padding-left: 100px;
+                float: flex;
+            }
+            .navdiv{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .logo a{
+                font-size: 35px;
+                font-weight: 600;
+                color: rgb(0, 122, 10);
+            }
+            li {
+                list-style: none;
+                display: inline-block;
+            }
+            li a{
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 25px;
+            }
+            .container {
+                max-width: 75%;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+                margin-top: 40px;
+            }
+            h1 {
+                color: #ffa500;
+            }
+            .checkbox-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .checkbox-item {
+                width: 20%; /* Four checkboxes in a row */
+                text-align: left;
+                margin: 5px;
+            }
+            #result-section {
+                margin-top: 20px;
+                display: none;
+            }
+            
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                box-sizing: border-box;
+                font-family: 'Poppins',sans-serif;
+            }
+
+            body{
+                height: 100vh;
+                width: 100%;
+                background-color: whitesmoke;
+            }
+
+            .logo{
+                height: 4rem;
+                width: 19rem;
+            }
+
+            .navbar{
+                display: flex;
+                align-items: center;
+                height: 70px;
+                background-color: white;
+                padding: 0 8%;
+            }
+
+            .navbar-logo{
+                cursor: pointer;
+            }
+
+            .navbar-list{
+                width: 100%;
+                text-align: right;
+                padding-right: 2rem; 
+            }
+
+            .navbar-list li{
+                display: inline-block;
+                margin: 0 1rem;
+            }
+
+            .navbar-list li a{
+                font-size: 1 rem;
+                font-weight: 500;
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+            .navbar li a:hover {
+                color: #1fb41a;}
+            
+            .navbar li a::before {
+                content: ""; /* Added pseudo-element for underline */
+                position: absolute;
+                width: 100%;
+                height: 2px; /* Adjusted height for underline */
+                background-color: #1fb41a;
+                bottom: 0;
+                left: 0;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .navbar li a:hover::before {
+                transform: scaleX(1);
+            }
+
+            .profile-dropdown{
+                position: relative;
+                width: fit-content;
+            }
+
+            .profile-dropdown-btn{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+                border: 2px solid #1fb41a;
+                border-radius: 50px;
+                width: 200px;
+                transition: box-shadow .2s, background-color 0.2s;
+            }
+
+            .profile-dropdown-btn:hover{
+                background-color:  #FBF46D;
+                box-shadow: black;
+            }
+
+            .profile-img{
+                position: relative;
+                width: 2rem;
+                height: 2rem;
+                background: url(../images/profpic.png);
+                background-size: cover;
+            }
+            .profile-img i{
+                position: absolute;
+                right: 0;
+                bottom: 0.1rem;
+                font-weight: 0.1rem;
+                color: green;
+            }
+
+            .user-info{
+                display: flex;
+                align-items: center;}
+
+            .user-info h4{
+                font-weight: 400;}
+
+            .user-info img{
+                width: 40px;
+                border-radius: 50%;
+                margin-right: 15px;}
+
+            .profile-dropdown-btn span{
+                margin: 0 0.5rem;
+                margin-right: 0;
+            }
+
+            .profile-dropdown-list{
+                position: absolute;
+                top: 68px;
+                width: 200px;
+                right: 60px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: black;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .profile-dropdown-list.active{
+                max-height: 500px;
+            }
+
+            .profile-dropdown-list hr{
+                border: .5px solid black;
+            }
+
+            .profile-dropdown-list-item{
+                padding: 0.5rem 0 0.5rem 1rem;
+            }
+
+            .profile-dropdown-list-item:hover{
+                padding-left: 1.5rem;
+                background-color:  #FBF46D;
+            }
+
+            .profile-dropdown-list-item a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: black;
+            }
+
+            .profile-dropdown-list-item a i{
+                margin-right: 0.8rem;
+                font-size: 1.1rem;
+                width: 2.3rem;
+                height: 2.3rem;
+                background-color: rgb(88, 219, 31);
+                color: white;
+                line-height: 2.3rem;
+                text-align: center;
+                border-radius: 50%;
+            }
+            .contact{
+                /* position: relative; */
+                min-height: 50vh;
+                display: flex;
+                padding: 50px 100px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: rgb(255,255,255,.8);
+            }
+            .contact .content{
+                max-width: 800px;
+                text-align: center;
+            }
+            .contact .content h2{
+                font-size: 36px;
+                font-weight: 500;
+            }
+            .contact .content p{
+                font-weight: 300;
+            }
+            .container{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+            }
+            .container .contactInfo{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            .container .contactInfo .box{
+                position: relative;
+                padding: 20px 0;
+                display: flex;
+                
+            }
+            .container .contactInfo .box .icon{
+                min-width: 60px;
+                height: 60px;
+                background-color: rgb(243, 255, 77);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 22px;
+            }
+            .container .contactInfo .box .text{
+                display: flex;
+                margin-left: 20px;
+                font-size: 16px;
+                flex-direction: column;
+                font-weight: 300;
+            }
+            .container .contactInfo .box .text h3{
+                font-weight: 600;
+            }
+            .contactForm{
+                width: 40%;
+                padding: 30px;
+                background: #ffffff;
+            }
+            .contactForm h2{
+                font-size: 40px;
+                color: #000000;
+                font-weight: 500;
+            }
+            .contactForm .inputBox{
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .contactForm .inputBox input,
+            .contactForm .inputBox textarea{
+                width: 100%;
+                padding: 5px 0;
+                font-size: 10px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                resize: none;
+            }
+            .contactForm .inputBox span{
+                position: absolute;
+                left: 0;
+                padding: 5px 0;
+                font-size: 10px;
+                margin: 10px 0;
+                pointer-events: none;
+                transition: 0.5s;
+                color: #000000;
+            }
+            .contactForm .inputBox input:focus ~ span,
+            .contactForm .inputBox input:valid ~ span,
+            .contactForm .inputBox textarea:focus ~ span,
+            .contactForm .inputBox textarea:valid ~ span{
+                color: #e91e63;
+                font-size: 12px;
+                transform: translateY(-20px);
+            }
+            .contactForm .inputBox input[type="submit"]{
+                width: 100px;
+                background: rgb(255, 233, 108);
+                color: #000000;
+                border: none;
+                cursor: pointer;
+                padding: 10px;
+                font-size: 15px;
+            }
+            @media (max-width: 990px){
+                .contact{
+                    padding: 50px;
+                }
+                .container{
+                    flex-direction: column;
+                }
+                .container .contactInfo{
+                    margin-bottom: 40px;
+                }
+                .container .contactInfo,
+                 .contactForm{
+                    width: 100%;
+                }
+            }
+
+    </style >
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" class="logo">
+        <ul class="navbar-list">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('pest') }}">Pest and Disease</a></li>
+            <li><a href="{{ url_for('aboutus') }}">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <div class="profile-dropdown-btn" onclick="toggle()">
+                <div class="user-info">
+                    <img src="{{ url_for('static', filename='images/profpic.png') }}" alt="">
+                    <p>Welcome, {{ user.username }}!</p>
+                </div>
+                <span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+             </div>
+        </div>
+        <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+                <div class="user-info">
+                    <img src="{{ url_for('static', filename='images/profpic.png') }}" alt="">
+                    <p>{{ user.firstname }} {{ user.lastname }}</p> 
+                </div>
+            </li>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('profile') }}">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    Edit Profile 
+                </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('profile') }}">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: #000000;"></i>
+                    History 
+                </a>
+            </li>
+            <hr>
+            <li class="profile-dropdown-list-item">
+                <a href="{{ url_for('logout') }}">
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: #000000;"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="contact">
+        <div class="content">
+            <h2>CONTACT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam augue augue, tempor sit amet finibus eu, eleifend sit amet purus. Nulla facilisi. 
+                Pellentesque ornare maximus leo sit amet scelerisque. Proin ac interdum diam.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Martinez Subdivision, <br>Dahican, City of Mati, <br>Davao Oriental, Philippines</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>09123456789</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>MaizExpert@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea type="text" required="required"></textarea>
+                        <span>Type your Message......</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>    
+    </section>
+        <!-- Your existing HTML code -->
+
+        <script>
+            let profileDropdownList = document.querySelector(".profile-dropdown-list");
+            let btn = document.querySelector(".profile-dropdown-btn");
+
+            const toggle = () => profileDropdownList.classList.toggle("active");
+
+            window.addEventListener('click',function(e){
+                if(!btn.contains(e.target))profileDropdownList.classList.remove('active');
+            });
+        </script>
+
+
+            
+</body>
+</html>

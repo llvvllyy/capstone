@@ -1,0 +1,150 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6bc746904.js" crossorigin="anonymous"></script>
+    <title>Recommended Corn Varieties</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        * { 
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+
+        .corn-variety {
+            margin: 15px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul.navbar-list {
+            margin-left: 0; /* Remove the default margin */
+            padding: 20px; /* Add padding for space */
+            width: 100%; /* Make it take the full width */
+            display: flex;
+            justify-content: center; /* Align items to the left */
+        }
+
+        ul.navbar-list li {
+            margin-right: 20px; /* Adjust the spacing between list items */
+        }
+
+        a {
+            display: flex;
+            background-color: #1fb41a;
+            color: rgb(255, 255, 255);
+            padding: 10px; /* Adjust the padding */
+            border: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Adjust the font size */
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+            text-align: center;
+            margin: 30px 0;
+            width: 100%; /* Make it take the full width */
+        }
+
+        .predict,
+        .real {
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        h4 {
+            display: inline;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 767px) {
+            .corn-variety .predict,
+            .corn-variety .real {
+                width: 100%; /* On smaller screens, take the full width */
+            }
+        }
+    </style>
+
+    <script>
+        // Disable the back 
+        document.addEventListener('DOMContentLoaded', function () {
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        })});
+
+    </script>
+
+</head>
+
+<body>
+<div class="corn-variety">
+
+    <ul class="navbar-list">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('profile') }}">Profile</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+
+    <ul class="navbar-list">
+        <li><a href="{{ url_for('select') }}">Try another recommended option</a></li>
+    </ul>
+
+    <h2>Result</h2>
+        <div class="predict">
+            {% if predicted_variety %}
+                <ul>
+                    <li>The predicted corn variety is: <h4>{{ predicted_variety }}</h4></li><br>
+                    <p>User's Choices:</p><br>        
+                    <li>Corn Type: <h4>{{ type_selection }}</h4></li>
+                    <li>Corn Trait: <h4>{{ trait_selection }}</h4></li>
+                    <li>Place: <h4>{{ domain_selection }}</h4></li>
+                    <li>Target Planting Date: <h4>{{ planting_date_selection}}</h4></li>
+                    <li>Target Harvest Date: <h4>{{ target_harvest_date_selection}}</h4></li>
+                    <li>Target days you want the corn to mature: <h4>{{ days_to_maturity }} days </h4></li>
+                    <li>Season: <h4>{{ season }}</h4></li>
+                    <li><h4>Yield: {{ predicted_yield }} metric tons/hectare</h4></li>
+                    <li><h4>User's Farm Size: {{ user_farm_size }} hectares</h4></li>
+                    <li><h4>Possible Yield: {{ possible_yield }} metric tons</h4></li>
+                </ul>
+        </div>
+        <div class="real">
+            <ul>
+                <p>Name: {{ variety_name }}</p>
+                <p>Year: {{ corn_yield }}</p>
+                <p>NSIC Registration Number: {{ nsic_regnum }}</p>
+            </ul>
+        </div>
+
+        {% else %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

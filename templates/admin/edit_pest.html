@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Pest Details</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include any additional CSS or styling links here -->
+
+    <style>
+        /* Style to darken the background behind the modal */
+        .modal-backdrop.show {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>Update Pest Details</h2>
+
+    <!-- Button to trigger modal -->
+    <!-- <button type="button" class="btn btn-secondary" style="height: 40px" data-toggle="modal" data-target="#updateModal">
+        Update Pest
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update Pest Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Your existing form goes here -->
+
+                    <form method="POST" action="{{ url_for('update_pest', pest_id=pest.pest_id) }}" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            <label for="pest_name">Pest Name:</label>
+                            {{ form.pest_name(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="pest_damage">Pest Damage:</label>
+                            {{ form.pest_damage(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="pest_cycle">Pest Life Cycle:</label>
+                            {{ form.pest_cycle(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                            <label for="pest_control">Pest Control:</label>
+                            {{ form.pest_control(class="form-control") }}
+                        </div>
+
+                        <!-- Add a hidden input field to store the pest ID -->
+                        <input type="hidden" name="pest_id" value="{{ pest.pest_id }}">
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Update Pest</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+<script>
+    document.querySelectorAll('.btn-info').forEach(button => {
+        button.addEventListener('click', updatePest);
+    });
+
+    // ... Other script code
+</script>
+<!-- Include any additional scripts or JavaScript links here -->
+
+</body>
+</html>

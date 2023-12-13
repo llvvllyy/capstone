@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Pest</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include any additional CSS or styling links here -->
+</head>
+<body>
+
+<div>
+    <h2>Add New Pest</h2>
+
+    <!-- Form for Adding a New Pest -->
+    <form method="POST" action="{{ url_for('add_pest') }}" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="pest_name">Pest Name:</label>
+            {{ form.pest_name(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="pest_damage">Pest Damage:</label>
+            {{ form.pest_damage(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="pest_cycle">Pest Life Cycle:</label>
+            {{ form.pest_cycle(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="pest_control">Pest Control:</label>
+            {{ form.pest_control(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="pest_photo">Add Pest Photo:</label>
+            {{ form.pest_photo(class="form-control-file") }}
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add Pest</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
